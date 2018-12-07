@@ -1,4 +1,6 @@
 ﻿using System;
+using compo.cli.composition.functionalities;
+using compo.cli.composition.functionalities.contracts;
 
 namespace compo.cli
 {
@@ -18,7 +20,15 @@ namespace compo.cli
 
             Console.WriteLine("Testing Robotphone 2...");
 
-            //TODO: composition
+            ICaller caller = new Caller();
+            ISpeaker speaker = new Speaker();
+            ITextSender text = new TextSender();
+            IWalker walker = new Walker();
+            var robot2 = new composition.models.Robotphone(caller, text, walker, speaker);
+            robot2.Walk();
+            robot2.Speak();
+            robot2.Call("222-222");
+            robot2.Text("222-222");
 
             Console.ReadKey();
         }

@@ -8,5 +8,8 @@
   <ItemGroup>
     <Folder Include="hierarchy\" />
     <Folder Include="composition\" />
+    <Folder Include="composition\functionalities\" />
+    <Folder Include="composition\functionalities\contracts\" />
+    <Folder Include="composition\models\" />
   </ItemGroup>
 </Project>
